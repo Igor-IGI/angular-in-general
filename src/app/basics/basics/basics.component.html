@@ -1,0 +1,14 @@
+<div class="row mt-4" id="string-interpolation">
+    <div class="col-xs-12">
+        <h3>String interpolation</h3>
+
+        <div id="name-string-interpolation">
+            <label>Input your name: </label>
+            <input type="text" #inputName>
+        </div>
+        <div class="mt-4">
+            <p>Your name is: <b>{{ name }}</b></p>          
+        </div>
+        <button class="btn btn-primary mt-2" (click)="onClick(inputName)">Insert name</button>
+    </div>
+</div>
