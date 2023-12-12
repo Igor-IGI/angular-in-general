@@ -9,8 +9,13 @@ import { Component } from '@angular/core';
 })
 export class BasicsComponent {
   name: string = 'Igor';
+  propertyBindingName: string = '';
 
   onClick(inputName: HTMLInputElement){
     this.name = inputName.value;
+  }
+
+  onClickPropertyBinding(inputName: any){
+    this.propertyBindingName = inputName;
   }
 }

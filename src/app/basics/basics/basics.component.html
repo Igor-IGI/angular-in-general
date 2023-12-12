@@ -1,14 +1,32 @@
 <div class="row mt-4" id="string-interpolation">
     <div class="col-xs-12">
-        <h3>String interpolation</h3>
+        <h3>String interpolation and event binding</h3>
 
         <div id="name-string-interpolation">
             <label>Input your name: </label>
             <input type="text" #inputName>
         </div>
         <div class="mt-4">
-            <p>Your name is: <b>{{ name }}</b></p>          
+            <p>Your name is: <b>{{ name }}</b></p>
         </div>
         <button class="btn btn-primary mt-2" (click)="onClick(inputName)">Insert name</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row mt-4" id="property-binding">
+    <div class="col-xs-12">
+        <h3>Property binding</h3>
+
+        <div id="name-property-binding">
+            <label>Input your name: </label>
+            <input type="text" #propertyName>
+        </div>        
+        <div class="mt-4">
+            <span>Your name is: </span>
+            <span id="property-name" [innerText]="name"></span>
+        </div>
+        <button class="btn btn-primary mt-4" (click)="onClick(propertyName)">Property binding</button>
     </div>
 </div>
