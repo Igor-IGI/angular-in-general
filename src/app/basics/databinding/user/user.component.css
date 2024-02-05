@@ -1,0 +1,21 @@
+.create-user{
+  margin-bottom: 75px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.input-field{
+  margin-top: 20px;
+}
+
+.input-field:last-child{
+  margin-bottom: 50px;
+}
+
+button{
+  margin: 20px 0 20px 0;
+  width: 100%;
+  max-width: 200px;
+}

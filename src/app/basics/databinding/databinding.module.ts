@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import {UserComponent} from "./user/user.component";
 
 
 
 @NgModule({
   declarations: [
-    UserListComponent
+    UserListComponent,
+    UserDetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    UserComponent
   ],
   exports:[
-    UserListComponent
+    UserListComponent,
+    UserDetailsComponent
   ]
 })
 export class DatabindingModule { }

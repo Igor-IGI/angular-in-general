@@ -1,17 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicsComponent } from './basics/basics.component';
-import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
-  declarations: [
-    BasicsComponent, //
-    DatabindingComponent,
-  ],
+  declarations: [BasicsComponent],
   imports: [CommonModule],
-  exports: [
-    BasicsComponent, //
-    DatabindingComponent,
-  ],
+  exports: [BasicsComponent],
 })
 export class BasicsModule {}

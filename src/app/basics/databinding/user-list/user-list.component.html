@@ -1,1 +1,11 @@
-<p>user-list works!</p>
+<div class="container">
+  <div class="row">
+    <app-user (createdUser)="addUser($event)"></app-user>
+  </div>
+  <div class="row">
+    <h3>User List</h3>
+    <div class="col-xs-12" *ngFor="let user of userList">
+      <app-user-details [user]="user"></app-user-details>
+    </div>
+  </div>
+</div>
