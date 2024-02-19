@@ -1,36 +1,85 @@
 <div class="row mt-4" id="string-interpolation">
-    <div class="col-xs-12">
-        <h3>String interpolation and event binding</h3>
+  <div class="col-xs-12">
+    <h3>String interpolation and event binding</h3>
 
-        <div id="name-string-interpolation">
-            <label>Input your name: </label>
-            <input type="text" #inputName>
-        </div>
-        <div class="mt-4">
-            <!-- String interpolation -->
-            <p>Your name is: <b>{{ name }}</b></p>
-        </div>
-        <!-- Event binding -->
-        <button class="btn btn-primary mt-2" (click)="onClick(inputName)">Insert name</button>
+    <div id="name-string-interpolation">
+      <label>Input your name: </label>
+      <input type="text" #inputName>
     </div>
+    <div class="mt-4">
+      <!-- String interpolation -->
+      <p>Your name is: <b>{{ name }}</b></p>
+    </div>
+    <!-- Event binding -->
+    <button class="btn btn-primary mt-2" (click)="onClick(inputName)">Insert name</button>
+  </div>
 </div>
 
 <hr>
 
 <div class="row mt-4" id="property-binding">
-    <div class="col-xs-12">
-        <h3>Property binding</h3>
+  <div class="col-xs-12">
+    <h3>Property binding</h3>
 
-        <div id="name-property-binding">
-            <label>Input your name: </label>
-            <input type="text" #propertyName>
-        </div>        
-        <div class="mt-4">
-            <span>Your name is: </span>
-            <!-- Property binding -->
-            <span id="property-name" [innerText]="name"></span>
-        </div>
-        <!-- Event binding -->
-        <button class="btn btn-primary mt-4" (click)="onClick(propertyName)">Property binding</button>
+    <div id="name-property-binding">
+      <label>Input your name: </label>
+      <input type="text" #propertyName>
     </div>
+    <div class="mt-4">
+      <span>Your name is: </span>
+      <!-- Property binding -->
+      <span id="property-name" [innerText]="propertyBindingName"></span>
+    </div>
+    <!-- Event binding -->
+    <button class="btn btn-primary mt-4" (click)="onClickPropertyBinding(propertyName)">Property binding</button>
+  </div>
+</div>
+
+<hr>
+
+<div
+  class="row mt-4"
+  id="two-way-event-binding">
+  <div class="col-xs-12">
+    <h3>Two way binding with [ngModel] and (ngModelChange)</h3>
+    <div>
+      <label>Input your name: </label>
+      <input type="text"
+             [ngModel]="customTwoWayBinding"
+             (ngModelChange)="customTwoWayBinding = $event">
+    </div>
+    <div class="mt-4">
+      <span>Your name is: </span>
+      <!-- Property binding -->
+      <span>{{ customTwoWayBinding }}</span>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div
+  class="row mt-4"
+  id="two-way-binding">
+
+  <div class="col-xs-12">
+    <h3>Two way binding</h3>
+    <div>
+      <label>Input your name: </label>
+      <input type="text" [(ngModel)]="twoWayBindingName">
+    </div>
+    <div class="mt-4">
+      <span>Your name is: </span>
+      <!-- Property binding -->
+      <span>{{ twoWayBindingName }}</span>
+    </div>
+  </div>
+  <p class="mt-3">
+    <strong>
+      [(ngModel)]="overRideRate"
+    </strong> is the short form of
+    <strong>
+    [ngModel]="overRideRate"(ngModelChange)="overRideRate = $event"
+    </strong>
+  </p>
 </div>

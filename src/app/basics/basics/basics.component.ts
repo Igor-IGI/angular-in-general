@@ -10,12 +10,14 @@ import { Component } from '@angular/core';
 export class BasicsComponent {
   name: string = 'Igor';
   propertyBindingName: string = '';
+  customTwoWayBinding: string = 'Test';
+  twoWayBindingName: string = 'Mika'
 
   onClick(inputName: HTMLInputElement){
     this.name = inputName.value;
   }
 
   onClickPropertyBinding(inputName: any){
-    this.propertyBindingName = inputName;
+    this.propertyBindingName = inputName.value;
   }
 }
