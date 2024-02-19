@@ -1,0 +1,20 @@
+GENERATE NEW PROJECT	
+-----------------------------------------------
+ng new project_name
+
+--no-strict --> Strict mode refers to enabling stricter type checking and other constraints that can help developers write more robust and maintainable code
+--routing false --> ROUTING refers to the process of navigating between different parts or views of an application when a user interacts with it.
+--standalone false --> Atandalone option refers to a new way of creating components, directives, and pipes that can be used independently of NgModules1.
+
+BOOTSTRAP
+-----------------------------------------------
+1. npm install --save bootstrap@3 --> save add package to project package.json file. @3 symbole is used to specify the version of the package that you want to install.
+2. node_modules/bootstrap/dist/css/bootstrap.min.css --> add this to angulat.json at style
+
+npm uninstall bootstrap --no-save
+
+GENERATE NEW COMPONENT 	
+-----------------------------------------------
+ng g c server-element --skip-tests --> (spec false will not generate component with ts file which is fot testing)
+ng g c test --flat --> It doesn't create new folder
+ng g c test --standalone false --> Create component which is not stand alone
