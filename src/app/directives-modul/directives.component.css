@@ -1,0 +1,26 @@
+h1 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.accordion-button {
+  font-weight: bold;
+}
+
+.directive {
+  font-size: 20px;
+}
+
+p {
+  font-size: large;
+}
+
+.select-color-directive {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  margin-left: 20px;
+}

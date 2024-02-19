@@ -1,0 +1,73 @@
+<div class="attribute-directives container">
+  <h1>Attribute Directives</h1>
+
+  <div
+    class="mt-2 mb-4 directive"
+    appBasicHighlight>
+    This is attribute Basic Highlight directive use ElementRef
+  </div>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+          Why should we use the Renderer instead of directly accessing the ElementRef?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          When using the renderer, manipulating the element is okay because you'll NOT directly interact with
+          it-(ElementRef) but through the Renderer. The Renderer is essentially a "tool" provided by Angular
+          that will manipulate DOM elements with both the runtime environment and Angular in mind.
+          So it will do that in a way that will not fail in non-DOM environments (e.g. server-side rendering)
+          and it will also "inform" Angular about the change.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="mt-4 mb-4 directive"
+    appBetterHighlight>
+    This is attribute Highlight directive which use Renderer2
+  </div>
+
+  <div
+    class="mt-4 mb-4 directive"
+    appBetterHighlightHostListener>
+    This is attribute Highlight directive which use Host Liner (mouseenter and mouseleft)
+  </div>
+
+
+  <section>
+    <div class="select-color-directive">
+      <p>Select highlight color in dropdown list</p>
+      <select
+        [ngModel]="defaultColor"
+        class="form-select-lg"
+        (change)="onChange($event)">
+
+        <option *ngFor="let color of colors">
+          {{ color }}
+        </option>
+      </select>
+    </div>
+
+    <div
+      class="mt-3 mb-2 directive"
+      appHostListenerHostBinding
+      [defaultColor]="'yellow'">
+      This is attribute Highlight directive which use Host Liner (mouseenter and mouseleft) and Host Binding
+    </div>
+  </section>
+
+</div>
+
+<hr class="mt-5">
+
+<div class="built-in-directives container">
+  <h1> Built in Directives</h1>
+</div>
+
