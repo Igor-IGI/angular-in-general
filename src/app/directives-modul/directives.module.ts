@@ -6,6 +6,7 @@ import { BetterHighlightDirectives } from "./directives/better-highlight.directi
 import { BetterHighlightHostListenerDirective } from "./directives/better-highlight-host-listener.directive";
 import { HostListenerHostBindingDirective } from "./directives/better-highlight-host-listener-host-binding.directive";
 import { FormsModule } from "@angular/forms";
+import { UnlessDirective } from "./directives/unless.directive";
 
 
 @NgModule({
@@ -13,10 +14,11 @@ import { FormsModule } from "@angular/forms";
     DirectivesComponent,
     BetterHighlightDirectives,
     BetterHighlightHostListenerDirective,
-    HostListenerHostBindingDirective
+    HostListenerHostBindingDirective,
+    UnlessDirective
   ],
   exports: [
-    DirectivesComponent
+    DirectivesComponent,
   ],
   imports: [
     CommonModule,

@@ -47,6 +47,7 @@
       <select
         [ngModel]="defaultColor"
         class="form-select-lg"
+        id="color-select"
         (change)="onChange($event)">
 
         <option *ngFor="let color of colors">
@@ -67,7 +68,46 @@
 
 <hr class="mt-5">
 
-<div class="built-in-directives container">
+<div class="structural-directives container">
   <h1> Built in Directives</h1>
+  <select
+    [(ngModel)]="showTemplate"
+    class="form-select-lg"
+    id="show-select">
+    <option [ngValue]="true">Show</option>
+    <option [ngValue]="false">Hide</option>
+  </select>
+
+  <section>
+    <ng-template
+      [ngIf]="showTemplate">
+      <p>
+        This si the <strong>ng-template</strong> with <strong>ngIf</strong>.
+      </p>
+    </ng-template>
+
+    <div
+      *ngIf="showTemplate">
+      <p>
+        This is the structural directive <strong>*ngIf</strong>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div
+      *ngIf="!showTemplate">
+      <p>
+        This is the structural directive inverse <strong>*ngIf</strong>.
+      </p>
+    </div>
+
+    <div *appUnless="showTemplate">
+      <p>
+        This is the custom made <strong>*appUnless</strong> structural directive which works like inverse
+        <strong>*ngIf</strong> directive.
+      </p>
+    </div>
+  </section>
 </div>
 

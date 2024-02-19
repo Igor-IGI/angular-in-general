@@ -21,6 +21,11 @@ p {
   align-items: center;
 }
 
-select {
+#color-select {
   margin-left: 20px;
+}
+
+#show-select{
+  margin-bottom: 20px;
+  width: 300px;
 }

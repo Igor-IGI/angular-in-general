@@ -11,6 +11,8 @@ export class DirectivesComponent implements AfterViewInit {
   defaultColor: string = this.colors[4];
   selectedColor: EventEmitter<string> = new EventEmitter<string>()
 
+  showTemplate: boolean = true;
+
   ngAfterViewInit(): void {
     this.selectedColor.emit(this.defaultColor);
   }
